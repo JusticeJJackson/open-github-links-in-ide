@@ -25,6 +25,7 @@ Once the extension is installed:
 
 - VS Code
 - VSCodium
+- Cursor
 - VS Code Insiders
 - PhpStorm
 - IntelliJ IDEA
@@ -67,6 +68,10 @@ Need a feature? Want to report a bug? Feel free to open an issue or a pull reque
 - The extension and the pages using it will be automatically reloaded when you modify the source code
 
 ## Changelog
+
+### Version 1.2.4 - Unreleased
+
+- Add support for Cursor
 
 ### Version 1.2.3 - September 23,2023
 
