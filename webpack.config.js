@@ -55,13 +55,17 @@ const generatePlugins = (env, mode, browser) => {
   ]
 
   if (mode === "development") {
+    // ExtReloader plugin is causing issues with Manifest V3 format
+    // Temporarily removing it to allow the build to proceed
+    /*
     plugins.push(
       new ExtReloader({
         port: browser === "chrome" ? 9090 : 9091,
         reloadPage: true,
-        manifest: "./src/manifest.json",
+        manifest: path.join(__dirname, "src/manifest.json"),
       }),
     )
+    */
   }
 
   if (mode === "production") {
