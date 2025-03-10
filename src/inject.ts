@@ -37,6 +37,18 @@ const run = async () => {
       location.href = url
       return url
     },
+    cursor: (repo: string, file: string, line?: string) => {
+      const url = `cursor://file/${OPTIONS.localPathForRepositories}/${repo}/${file}:${line ?? "1"}`
+      location.href = url
+      return url
+    },
+    "cursor-wsl": (repo: string, file: string, line?: string) => {
+      const url = `cursor://vscode-remote/wsl+Ubuntu/${OPTIONS.localPathForRepositories}/${repo}/${file}:${
+        line ?? "1"
+      }:1`
+      location.href = url
+      return url
+    },
     "vscode-insiders": (repo: string, file: string, line?: string) => {
       const url = `vscode-insiders://file/${OPTIONS.localPathForRepositories}/${repo}/${file}:${line ?? "1"}`
       location.href = url
